@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRDS COLONY | Premium Bird Nutrition</title>
+    <meta name="description" content="Premium bird nutrition crafted for excellence. Nature. Luxury. Purity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h1 class="logo-text golden-shimmer">BIRDS COLONY</h1>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <p class="loading-text" id="loading-text">Loading 0%</p>
+        </div>
+    </div>
+
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo golden-shimmer">BIRDS COLONY</div>
+        <div class="sidebar-links">
+            <a href="#products" class="sidebar-link">Products</a>
+            <a href="#ingredients" class="sidebar-link">Ingredients</a>
+            <a href="#story" class="sidebar-link">Our Story</a>
+            <a href="#contact" class="sidebar-cta">Explore</a>
+        </div>
+    </nav>
+
+    <!-- Fixed Ambient Background (Revealed after hero) -->
+    <div class="ambient-fixed-bg">
+        <div class="bg-glows"></div>
+        <div class="bg-leaves"></div>
+        <div class="bg-blur-overlay"></div>
+        <div class="bg-feathers"></div>
+        <div class="bg-dust"></div>
+        <div class="bg-noise"></div>
+    </div>
+
+    <!-- Scroll-based Hero Animation Section -->
+    <section class="hero-container" id="hero-container">
+        <div class="sticky-wrapper">
+            <canvas id="hero-canvas"></canvas>
+            
+            <div class="hero-overlay-text text-overlay-2" id="text-2">
+                <button class="cta-button">Explore Birds Colony</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content below Hero -->
+    <main class="content">
+        <div class="content-fade-top"></div>
+
+        <!-- Premium Quality Promise -->
+        <section class="section quality-promise reveal" id="promise">
+            <div class="container center">
+                <div class="section-header">
+                    <h2 class="playfair">Premium Nutrition for Happy Birds</h2>
+                    <p class="subtext">Crafted with care using natural, organic, and high-quality ingredients for healthier, happier birds.</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="promise-grid">
+                    <div class="promise-item">
+                        <div class="promise-icon">✨</div>
+                        <h4>Natural Ingredients</h4>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">🌿</div>
+                        <h4>Organic Quality</h4>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">⚕️</div>
+                        <h4>Vet Recommended Nutrition</h4>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">🛡️</div>
+                        <h4>Safe for Daily Feeding</h4>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">📦</div>
+                        <h4>Freshly Packed Products</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling Categories -->
+        <section class="section best-selling reveal" id="products">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="playfair">Everything Your Birds Need</h2>
+                    <p class="subtext">From nutrition to comfort, discover premium essentials designed for every bird.</p>
+                    <div class="divider"></div>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card card-large">
+                        <img src="assets/products/cage.png" alt="Premium Bird Cages" class="category-img">
+                        <div class="category-info">
+                            <h3 class="playfair">Premium Bird Cages</h3>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/products/seeds.png" alt="Special Mix Seeds" class="category-img">
+                        <div class="category-info">
+                            <h3 class="playfair">Special Mix Seeds</h3>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/products/cockatiel_feed.png" alt="Hand Feeding Formula" class="category-img">
+                        <div class="category-info">
+                            <h3 class="playfair">Hand Feeding Formula</h3>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <img src="assets/products/accessories.png" alt="Bird Accessories" class="category-img">
+                        <div class="category-info">
+                            <h3 class="playfair">Bird Accessories</h3>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-placeholder">
+                            <div class="promise-icon" style="font-size: 3rem;">💧</div>
+                        </div>
+                        <div class="category-info">
+                            <h3 class="playfair">Health & Care Products</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Birds Colony -->
+        <section class="section why-choose-us reveal" id="why-us">
+            <div class="container">
+                <div class="why-choose-layout">
+                    <div class="why-text">
+                        <h2 class="playfair">Why Bird Owners Choose Us</h2>
+                        <p class="subtext">Because your birds deserve the best care, nutrition, and comfort every single day.</p>
+                        <div class="divider" style="margin: 0; margin-top: 2rem;"></div>
+                    </div>
+                    <div class="trust-badges-grid">
+                        <div class="trust-badge">
+                            <span class="badge-icon">💖</span>
+                            <span>Trusted by Bird Lovers</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">⭐</span>
+                            <span>High Quality Products</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">🔒</span>
+                            <span>Safe & Fresh Packaging</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">🚀</span>
+                            <span>Fast Delivery</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">💎</span>
+                            <span>Affordable Premium Quality</span>
+                        </div>
+                        <div class="trust-badge">
+                            <span class="badge-icon">📞</span>
+                            <span>Expert Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Hand Feed Formula Section -->
+        <section class="section hand-feed-section reveal" id="hand-feed">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="playfair">Specialized Hand Feeding Formula</h2>
+                    <p class="subtext">Scientifically balanced nutrition for healthy growth, strength, and daily vitality.</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="hand-feed-showcase">
+                    <div class="hf-card">
+                        <img src="assets/products/cockatiel_feed.png" alt="Cockatiel Hand Feed" class="hf-img">
+                        <h3 class="playfair">Cockatiel Hand Feed</h3>
+                        <p>Balanced Nutrition Formula</p>
+                    </div>
+                    <div class="hf-card">
+                        <img src="assets/products/budgie_feed.png" alt="Budgie Hand Feed" class="hf-img">
+                        <h3 class="playfair">Budgie Hand Feed</h3>
+                        <p>Easy Digestion</p>
+                    </div>
+                    <div class="hf-card">
+                        <img src="assets/products/finch_feed.png" alt="Finch Hand Feed" class="hf-img">
+                        <h3 class="playfair">Finch Hand Feed</h3>
+                        <p>Strong Growth Support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Mix Seed Collection -->
+        <section class="section mix-seed-section reveal" id="mix-seeds">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="playfair">Curated Premium Seed Blends</h2>
+                    <p class="subtext">Specially crafted seed mixes designed for taste, health, and complete nutrition.</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="seed-collection-layout">
+                    <div class="seed-main-visual">
+                        <img src="assets/products/mix_seed.png" alt="Premium Mix Seeds" class="seed-img">
+                    </div>
+                    <div class="seed-list">
+                        <div class="seed-item">
+                            <h4 class="playfair">Cockatiel Mix</h4>
+                            <p>Rich sunflower and safflower blend.</p>
+                        </div>
+                        <div class="seed-item">
+                            <h4 class="playfair">Budgie Mix</h4>
+                            <p>Premium millet and canary seed combination.</p>
+                        </div>
+                        <div class="seed-item">
+                            <h4 class="playfair">Finch Mix</h4>
+                            <p>High-energy small seed formulation.</p>
+                        </div>
+                        <div class="seed-item">
+                            <h4 class="playfair">Lovebird Mix</h4>
+                            <p>Balanced nutrition for active lovebirds.</p>
+                        </div>
+                        <div class="seed-item">
+                            <h4 class="playfair">Exotic Bird Mix</h4>
+                            <p>Diverse ingredients for tropical species.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust + Social Proof Section -->
+        <section class="section social-proof reveal" id="reviews">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="playfair">Loved by Bird Owners</h2>
+                    <p class="subtext">Thousands of bird lovers trust Birds Colony for premium care and nutrition.</p>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"The premium seed mix is incredible. My cockatiel's feathers have never looked so vibrant. Pure luxury in a bag."</p>
+                        <p class="review-author">- Sarah T. (Happy Customer)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"As a breeder, I only use Birds Colony hand feed formula. The growth and digestion support is unmatched."</p>
+                        <p class="review-author">- James R. (Repeat Buyer)</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Everything from the cages to the accessories screams premium. This is truly the Apple of bird brands."</p>
+                        <p class="review-author">- Emily L. (Premium Review)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strong CTA Section -->
+        <section class="section cta-premium reveal" id="contact">
+            <div class="container center cta-container">
+                <h2 class="playfair">Give Your Birds the Best</h2>
+                <p class="cta-subtext">Premium nutrition, premium care, premium living.</p>
+                <button class="cta-button large-cta glowing-btn">Shop Now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="playfair golden-shimmer">BIRDS COLONY</h2>
+                <p>Natural. Organic. Premium.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#products">Shop</a>
+                <a href="#story">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <span>Instagram</span>
+                <span>Facebook</span>
+                <span>Twitter</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Birds Colony. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
