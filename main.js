@@ -48,6 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
             h = ctx.canvas.height;
         }
 
+        // Mobile optimization: Use 'contain' to prevent text cropping on small screens
+        if (window.innerWidth <= 768) {
+            const hRatio = w / img.width;
+            const vRatio = h / img.height;
+            const ratio  = Math.min(hRatio, vRatio);
+            const centerShift_x = (w - img.width * ratio) / 2;
+            const centerShift_y = (h - img.height * ratio) / 2;  
+            ctx.clearRect(0, 0, w, h);
+            ctx.drawImage(img, 0, 0, img.width, img.height, x + centerShift_x, y + centerShift_y, img.width * ratio, img.height * ratio);
+            return;
+        }
+
         // default offset is center
         offsetX = typeof offsetX === "number" ? offsetX : 0.5;
         offsetY = typeof offsetY === "number" ? offsetY : 0.5;
