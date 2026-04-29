@@ -888,23 +888,61 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+@media (max-width: 900px) {
+    .hand-feed-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    .product-showcase {
-        grid-template-columns: 1fr;
+    .section {
+        padding: 6rem 5%;
     }
-    .variants-grid {
-        grid-template-columns: 1fr;
-    }
-    .nav-links {
-        display: none;
-    }
+    
     .section-header h2 {
         font-size: 2.5rem;
     }
-    .text-overlay-1 h1 {
-        font-size: 2.5rem;
-    }
+    
     .logo-reveal {
         font-size: 3rem;
+    }
+    
+    /* Layout Overrides */
+    .why-choose-layout,
+    .seed-collection-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .trust-badges-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hand-feed-showcase,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .promise-grid {
+        gap: 2rem;
+    }
+    
+    /* Image Adjustments */
+    .hf-img {
+        height: 250px;
+    }
+    
+    /* CTA */
+    .cta-premium {
+        padding: 8rem 5%;
+    }
+    
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
