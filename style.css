@@ -223,6 +223,16 @@ a:hover {
     background-color: #000000;
 }
 
+/* Edge Blending Vignette to hide scaled canvas edges */
+.sticky-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    box-shadow: inset 0 0 12vw 4vw #000000;
+    pointer-events: none;
+    z-index: 4;
+}
+
 /* Vintage Fade Overlay */
 .sticky-wrapper::after {
     content: '';
@@ -244,6 +254,7 @@ a:hover {
     height: 100vh;
     opacity: 0;
     transition: opacity 1s ease;
+    transform: scale(0.85); /* Zoom out slightly for spacious premium feel */
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
