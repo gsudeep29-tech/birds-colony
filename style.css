@@ -254,7 +254,7 @@ a:hover {
     height: 100vh;
     opacity: 0;
     transition: opacity 1s ease;
-    transform: scale(0.75); /* Zoom out 25% for spacious premium feel */
+    transform: scale(0.85); /* Zoom out 15% for spacious premium feel */
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
