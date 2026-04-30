@@ -196,4 +196,56 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealObserver.observe(el);
     });
+
+    // =====================================================
+    // Mobile Category Swipe Slider — Dot Sync & Navigation
+    // =====================================================
+    const categoryGrid = document.getElementById('categoryGrid');
+    const sliderDots   = document.querySelectorAll('.slider-dot');
+    const categoryCards = document.querySelectorAll('.category-card');
+
+    const updateActiveDot = (index) => {
+        sliderDots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    };
+
+    if (categoryGrid && sliderDots.length > 0) {
+        // Sync dots when user scrolls the slider
+        categoryGrid.addEventListener('scroll', () => {
+            if (window.innerWidth > 768) return;
+            const cardWidth  = categoryGrid.firstElementChild.offsetWidth + 12; // card + gap
+            const scrollLeft = categoryGrid.scrollLeft;
+            const activeIndex = Math.round(scrollLeft / cardWidth);
+            updateActiveDot(activeIndex);
+        }, { passive: true });
+
+        // Dots click → scroll to card
+        sliderDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                if (window.innerWidth > 768) return;
+                const cardWidth = categoryGrid.firstElementChild.offsetWidth + 12;
+                categoryGrid.scrollTo({ left: i * cardWidth, behavior: 'smooth' });
+                updateActiveDot(i);
+            });
+        });
+
+        // Card click handler (future-ready — fires a custom event per card)
+        categoryCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                const index = card.getAttribute('data-index');
+                card.dispatchEvent(new CustomEvent('card-selected', {
+                    bubbles: true,
+                    detail: { index: Number(index), label: card.getAttribute('aria-label') }
+                }));
+            });
+            // Keyboard accessibility
+            card.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    card.click();
+                }
+            });
+        });
+    }
 });
