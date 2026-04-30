@@ -48,18 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
             h = ctx.canvas.height;
         }
 
-        // Mobile optimization: Use 'contain' to prevent text cropping on small screens
-        if (window.innerWidth <= 768) {
-            const hRatio = w / img.width;
-            const vRatio = h / img.height;
-            const ratio  = Math.min(hRatio, vRatio);
-            const centerShift_x = (w - img.width * ratio) / 2;
-            const centerShift_y = (h - img.height * ratio) / 2;  
-            ctx.clearRect(0, 0, w, h);
-            ctx.drawImage(img, 0, 0, img.width, img.height, x + centerShift_x, y + centerShift_y, img.width * ratio, img.height * ratio);
-            return;
-        }
-
         // default offset is center
         offsetX = typeof offsetX === "number" ? offsetX : 0.5;
         offsetY = typeof offsetY === "number" ? offsetY : 0.5;
@@ -102,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Set canvas dimensions
     const updateCanvasSize = () => {
+        const isMobile = window.innerWidth <= 768;
         canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.height = isMobile ? window.innerHeight * 0.65 : window.innerHeight;
         // Optionally redraw the current frame here to avoid blank canvas on resize
         if (images[Math.floor(currentFrameIndex.current)] && images[Math.floor(currentFrameIndex.current)].complete) {
             drawImageProp(context, images[Math.floor(currentFrameIndex.current)], 0, 0, canvas.width, canvas.height);

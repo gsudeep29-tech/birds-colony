@@ -223,16 +223,29 @@ a:hover {
     background-color: #000000;
 }
 
+/* Vintage Fade Overlay */
+.sticky-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35vh; /* Covers bottom 35% of the screen */
+    background: linear-gradient(to top, var(--bg-dark) 0%, rgba(10, 17, 13, 0.8) 20%, transparent 100%);
+    pointer-events: none;
+    z-index: 5;
+}
+
 #hero-canvas {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 #hero-canvas.visible {
@@ -898,6 +911,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    #hero-canvas {
+        height: 65vh;
+        -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    }
+
+    .text-overlay-2 {
+        top: auto;
+        bottom: 8%;
+        gap: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.8rem;
+    }
+
+    .product-showcase {
+        grid-template-columns: 1fr;
+    }
+    .variants-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+    
     .section {
         padding: 6rem 5%;
     }
@@ -906,6 +946,10 @@ footer {
         font-size: 2.5rem;
     }
     
+    .text-overlay-1 h1 {
+        font-size: 2.5rem;
+    }
+
     .logo-reveal {
         font-size: 3rem;
     }
