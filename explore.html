@@ -120,16 +120,19 @@
                 <span id="counterText">Cover</span>
             </div>
 
+            <!-- Navigation Arrows (INSIDE book-container → positioned relative to book) -->
+            <button class="nav-arrow prev-arrow" id="prevArrow" aria-label="Previous page">&#8249;</button>
+            <button class="nav-arrow next-arrow" id="nextArrow" aria-label="Next page">&#8250;</button>
+
+            <!-- Physics flip shadow overlay -->
+            <div class="flip-shadow-overlay" id="flipShadowOverlay"></div>
+
+            <!-- Swipe Hint (mobile) -->
+            <div class="swipe-hint" id="swipeHint">
+                <span class="sh-icon">&#8592;</span> Swipe to explore
+            </div>
+
         </div><!-- /book-container -->
-
-        <!-- Navigation Arrows -->
-        <button class="nav-arrow prev-arrow" id="prevArrow" aria-label="Previous page">&#8249;</button>
-        <button class="nav-arrow next-arrow" id="nextArrow" aria-label="Next page">&#8250;</button>
-
-        <!-- Swipe Hint (mobile) -->
-        <div class="swipe-hint" id="swipeHint">
-            <span class="sh-icon">&#8592;</span> Swipe to explore
-        </div>
 
     </main>
 
