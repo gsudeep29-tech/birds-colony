@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRDS COLONY | Explore the Encyclopedia</title>
+    <meta name="description" content="Explore the premium Birds Colony illustrated bird encyclopedia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+
+    <!-- Ambient Background -->
+    <div class="explore-bg">
+        <div class="bg-glow bg-glow-1"></div>
+        <div class="bg-glow bg-glow-2"></div>
+        <div class="bg-particles"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="explore-header">
+        <a href="index.html" class="back-btn" id="backBtn">
+            <span class="back-arrow">&#8592;</span>
+            <span class="back-text">Birds Colony</span>
+        </a>
+
+        <div class="header-title">The Encyclopedia</div>
+
+        <!-- Translate Widget -->
+        <div class="translate-widget" id="translateWidget">
+            <button class="translate-btn" id="translateBtn" aria-haspopup="true" aria-expanded="false">
+                <span>&#127760;</span>
+                <span id="translateLabel">EN</span>
+                <span class="caret">&#9662;</span>
+            </button>
+            <div class="translate-dropdown" id="translateDropdown" role="listbox">
+                <button class="lang-opt active" data-lang="en" data-short="EN">English</button>
+                <button class="lang-opt" data-lang="bn" data-short="BN">&#2476;&#2494;&#2434;&#2482;&#2494;</button>
+                <button class="lang-opt" data-lang="hi" data-short="HI">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Book Scene -->
+    <main class="book-scene" id="bookScene">
+
+        <div class="book-container" id="bookContainer">
+
+            <!-- Book Shadow -->
+            <div class="book-shadow"></div>
+
+            <!-- THE BOOK -->
+            <div class="book" id="book">
+
+                <!-- Left Panel (static, behind leaves) -->
+                <div class="book-panel left-panel" id="leftPanel">
+                    <div class="panel-inner" id="leftContent"></div>
+                    <div class="page-sheen left-sheen"></div>
+                </div>
+
+                <!-- Spine -->
+                <div class="book-spine">
+                    <div class="spine-title">BIRDS COLONY</div>
+                    <div class="spine-line"></div>
+                </div>
+
+                <!-- Right Panel (static, behind leaves) -->
+                <div class="book-panel right-panel" id="rightPanel">
+                    <div class="panel-inner" id="rightContent"></div>
+                    <div class="page-sheen right-sheen"></div>
+                </div>
+
+                <!-- Flip Leaf Overlay (reused for every flip animation) -->
+                <div class="flip-leaf" id="flipLeaf">
+                    <div class="leaf-face leaf-front" id="leafFront">
+                        <div class="leaf-inner"></div>
+                    </div>
+                    <div class="leaf-face leaf-back" id="leafBack">
+                        <div class="leaf-inner"></div>
+                    </div>
+                </div>
+
+                <!-- Cover Leaf (opens on load) -->
+                <div class="cover-leaf" id="coverLeaf">
+                    <div class="leaf-face cover-front">
+                        <div class="cover-design">
+                            <div class="cover-corner cover-tl"></div>
+                            <div class="cover-corner cover-tr"></div>
+                            <div class="cover-corner cover-bl"></div>
+                            <div class="cover-corner cover-br"></div>
+                            <div class="cover-badge">EST. 2024</div>
+                            <div class="cover-bird-art">&#129436;</div>
+                            <div class="cover-text-block">
+                                <div class="cover-pre">THE PREMIUM GUIDE TO</div>
+                                <h1 class="cover-main-title">Birds<br><span>Colony</span></h1>
+                                <div class="cover-rule"></div>
+                                <div class="cover-sub">An Illustrated Encyclopedia</div>
+                                <div class="cover-edition">COLLECTOR'S EDITION &middot; MMXXVI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leaf-face cover-back">
+                        <div class="inside-cover">
+                            <div class="ic-pattern"></div>
+                            <div class="ic-quote">
+                                <div class="ic-ornament">&#10022;</div>
+                                <p class="ic-text">&ldquo;In every bird, nature has written<br>a poem in feathers.&rdquo;</p>
+                                <p class="ic-attr">&mdash; Birds Colony</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /book -->
+
+            <!-- Page Counter -->
+            <div class="page-counter" id="pageCounter">
+                <span id="counterText">Cover</span>
+            </div>
+
+        </div><!-- /book-container -->
+
+        <!-- Navigation Arrows -->
+        <button class="nav-arrow prev-arrow" id="prevArrow" aria-label="Previous page">&#8249;</button>
+        <button class="nav-arrow next-arrow" id="nextArrow" aria-label="Next page">&#8250;</button>
+
+        <!-- Swipe Hint (mobile) -->
+        <div class="swipe-hint" id="swipeHint">
+            <span class="sh-icon">&#8592;</span> Swipe to explore
+        </div>
+
+    </main>
+
+    <script src="explore.js"></script>
+</body>
+</html>
